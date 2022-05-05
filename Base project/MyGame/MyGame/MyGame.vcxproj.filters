@@ -35,6 +35,7 @@
     </ClInclude>
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="Ship.h" />
+    <ClInclude Include="Laser.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -51,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\ship.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="..\..\..\Art\laser.png">
       <Filter>Resources</Filter>
     </Image>
   </ItemGroup>
