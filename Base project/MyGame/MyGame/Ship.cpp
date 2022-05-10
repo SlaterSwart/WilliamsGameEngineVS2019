@@ -46,4 +46,9 @@ void Ship::update(sf::Time& elapsed) {
 		}
 	}
 	sprite_.setPosition(sf::Vector2f(x, y));
+
+	if (fireTimer_ > 0) {
+		fireTimer_ -= msElapsed;
+	}
+	if(sf::Keyboard::)
 }
