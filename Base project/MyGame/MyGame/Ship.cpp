@@ -50,5 +50,14 @@ void Ship::update(sf::Time& elapsed) {
 	if (fireTimer_ > 0) {
 		fireTimer_ -= msElapsed;
 	}
-	if(sf::Keyboard::)
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && fireTimer_ <= 0) {
+		fireTimer_ = FIRE_DELAY;
+
+		sf::FloatRect bounds = sprite_.getGlobalBounds();
+		float laserX = x + bounds.width;
+		float laserY = y + (bounds.height / 2.0f);
+
+		LaserPtr laser = std::make_shared<Laser>(sf::Vector2f(laserX, laserY));
+		GAME.getCurrentScene().addGameObject(laser);
+	}
 }
