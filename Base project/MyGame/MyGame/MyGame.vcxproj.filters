@@ -19,6 +19,8 @@
     <ClCompile Include="Laser.cpp" />
     <ClCompile Include="Meteor.cpp" />
     <ClCompile Include="MeteorSpawner.cpp" />
+    <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="score.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\AnimatedSprite.h">
@@ -41,6 +43,8 @@
     <ClInclude Include="Laser.h" />
     <ClInclude Include="Meteor.h" />
     <ClInclude Include="MeteorSpawner.h" />
+    <ClInclude Include="Explosion.h" />
+    <ClInclude Include="score.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -62,5 +66,18 @@
     <Image Include="..\..\..\Art\laser.png">
       <Filter>Resources</Filter>
     </Image>
+    <Image Include="Resources\explosion-spritesheet.png">
+      <Filter>Resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resources\boom.wav">
+      <Filter>Resources</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\Courneuf-Regular.ttf">
+      <Filter>Resources</Filter>
+    </Font>
   </ItemGroup>
 </Project>

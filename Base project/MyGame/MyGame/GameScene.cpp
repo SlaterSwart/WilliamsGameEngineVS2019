@@ -1,6 +1,7 @@
 #include "GameScene.h"
 #include "Ship.h"
 #include "MeteorSpawner.h"
+#include "score.h"
 
 GameScene::GameScene() {
 
@@ -10,4 +11,10 @@ GameScene::GameScene() {
 	MeteorSpawnerPtr meteorSpawner = std::make_shared<MeteorSpawner>();
 	addGameObject(meteorSpawner);
 
+}
+int GameScene::getScore() {
+	return score_;
+}
+void GameScene::increaseScore() {
+	score_++;
 }
