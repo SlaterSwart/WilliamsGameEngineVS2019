@@ -1,4 +1,8 @@
 #include "Meteor.h"
+#include <iostream>
+#include "GameScene.cpp"
+#include "Explosion.h"
+#include "Laser.h"
 
 const float SPEED = 0.3f;
 
@@ -23,12 +27,16 @@ void Meteor::update(sf::Time& elapsed) {
 		sprite_.setPosition(sf::Vector2f(pos.x - SPEED * msElapsed, pos.y));
 	}
 }
-sf::FloatRect Meteor::getCollisionRect() {
+sf::FloatRect Meteor::getCollisionRect()
+{
 	return sprite_.getGlobalBounds();
 }
-void Meteor::handleCollision(GameObject& otherGameObject) {
-	if (otherGameObject.hasTag("laser")) {
+void Meteor::handleCollision(GameObject& otherGameObject)
+{
+	if (otherGameObject.hasTag("laser"))
+	{
 		otherGameObject.makeDead();
+		
 	}
 	makeDead();
 }
