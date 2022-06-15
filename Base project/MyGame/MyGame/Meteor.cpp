@@ -33,10 +33,14 @@ sf::FloatRect Meteor::getCollisionRect()
 }
 void Meteor::handleCollision(GameObject& otherGameObject)
 {
+	GameScene& scene = (GameScene&)GAME.getCurrentScene();
 	if (otherGameObject.hasTag("laser"))
 	{
 		otherGameObject.makeDead();
-		
+
+		ExplosionPtr explosion = std::make_shared<Explosion>(sprite_.getPosition());
+		scene.addGameObject(explosion);
+		scene.increaseScore();
 	}
 	makeDead();
 }
